@@ -1,0 +1,46 @@
+\usepackage{inconsolata}
+\lstset{
+	language=R,
+	basicstyle=\ttfamily\fontsize{9pt}{9pt}\selectfont, % Code font, Examples: \footnotesize, \small, \ttfamily, \sffamily
+	numbers=none, % Line numbers hidden
+	numberstyle=\tiny\color{gray}, % Line numbers styling
+	stepnumber=1, % Line number step
+	numbersep=5pt, % How far the line numbers are from the code
+	backgroundcolor=\color{white}, % Choose background color
+	showspaces=false, % Show spaces adding particular underscores
+	showstringspaces=false, % Underline spaces within strings only
+	showtabs=false, % Show tabs within strings adding particular underscores
+	frame=single,
+	framesep=3pt, % Space between the frame and the code
+	xleftmargin=3pt,
+	xrightmargin=3pt,
+	rulecolor=\color{gray}, % Frame color
+	tabsize=2, % Custom tab sizes
+	captionpos=b, % Sets the caption-position to bottom
+	breaklines=true, % Automatic line breaking
+	breakatwhitespace=false, % Automatic breaks only at whitespace
+	title=\lstname, % Show the filename of files included with \lstinputlisting;
+	keywordstyle=\color{blue}, % Keyword style
+	commentstyle=\color{gray}, % Comment style
+	stringstyle=\color{darkgreen}, % String literal style
+	morekeywords={*,...}, % If you want to add more keywords to the set
+	inputencoding=utf8,
+	extendedchars=true,
+	literate=%
+	{á}{{\'a}}1
+	{í}{{\'i}}1
+	{é}{{\'e}}1
+	{ý}{{\'y}}1
+	{ú}{{\'u}}1
+	{ó}{{\'o}}1
+	{Á}{{\'A}}1
+	{Í}{{\'I}}1
+	{É}{{\'E}}1
+	{Ý}{{\'Y}}1
+	{Ú}{{\'U}}1
+	{Ó}{{\'O}}1
+	{ñ}{{\~n}}1
+	{Ñ}{{\~N}}1
+	{¿}{{?`}}1
+}
+\newcommand{\inlinecode}[1]{\lstinline|#1|}

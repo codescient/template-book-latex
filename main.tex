@@ -1,0 +1,106 @@
+\documentclass[a5paper,11pt]{book}
+\usepackage{booktabs}
+\usepackage{textcomp}
+\usepackage{enumitem}
+\usepackage{placeins}
+\usepackage{listings}
+\usepackage{changepage}
+\usepackage{lastpage}
+\usepackage{xcolor}
+\usepackage{anyfontsize}
+\definecolor{darkgreen}{RGB}{0,170,50}
+\usepackage{wrapfig}
+
+\usepackage{fbb}
+\usepackage[T1]{fontenc}
+
+\usepackage{caption}
+\captionsetup{justification=centering}
+
+\usepackage[scaled]{helvet}
+\usepackage{titlesec}
+\titleformat*{\section}{\Large\bfseries\sffamily}
+\titleformat*{\subsection}{\large\bfseries\sffamily}
+\titleformat*{\subsubsection}{\normalsize\bfseries\sffamily}
+\input{./TeX_files/codeblock}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage[indonesian,english]{babel}
+\usepackage{geometry}
+\geometry{inner=2.5cm, outer=1.5cm, top=2cm, bottom=2cm}
+
+\usepackage{url}
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue,
+	filecolor=magenta,      
+	urlcolor=cyan,
+}
+
+\begin{document}
+
+\author{Dr. Alpha Beta Gamma, Ph.D, Sci \\ 
+	Xander Yorick Zane, B.Stat, M.Stat \\
+	Quincy Vesper Wynn, B.Stat, M.Stat
+}
+\title{Book Template with \LaTeX}
+\date{Month 2023}
+
+\frontmatter
+\pagenumbering{roman}
+\newgeometry{margin=1.2cm}
+\newcommand{\editors}[1]{%
+	\newcommand{\inserteditors}{#1}
+}
+
+\editors{Dr. Epsilon Theta}
+	
+\begin{titlepage}
+	\centering
+	\vspace*{1cm}
+	
+	{\Huge Book Template with \LaTeX}
+	
+	\vspace{2cm}
+	\textbf{Authors:}\\
+	Dr. Alpha Beta Gamma, Ph.D, Sci \\
+	Xander Yorick Zane, B.Stat, M.Stat \\
+	Quincy Vesper Wynn, B.Stat, M.Stat
+	
+	\vspace{1cm}
+	\textbf{Editor:}\\
+	\inserteditors
+\end{titlepage}
+\restoregeometry
+
+\include{./TeX_files/copyright}
+\include{./TeX_files/foreword}
+\include{./TeX_files/tableofcontents}
+\newcounter{lastfrontmatterpage}
+\setcounter{lastfrontmatterpage}{\value{page}}
+
+\mainmatter
+
+% Chapters
+\include{./TeX_files/chapter01}
+\include{./TeX_files/chapter02}
+\include{./TeX_files/chapter03}
+
+\backmatter
+\pagenumbering{roman}
+\setcounter{page}{\value{lastfrontmatterpage}}
+\newpage
+
+% Clear headers and footers
+\pagestyle{plain}
+
+\include{./TeX_files/authorbio}
+
+\newpage
+% bibliography, glossary and index would go here.
+\bibliographystyle{plain}
+\addcontentsline{toc}{chapter}{Bibliography}
+\bibliography{references}
+
+\end{document}
