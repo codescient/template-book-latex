@@ -1,0 +1,51 @@
+# General
+*.log
+*.aux
+*.glo
+*.idx
+*.toc
+*.ist
+*.acn
+*.acr
+*.alg
+*.bbl
+*.blg
+*.dvi
+*.glg
+*.gls
+*.ilg
+*.lof
+*.lot
+*.maf
+*.mtc
+*.mtc0
+*.nav
+*.nlo
+*.out
+*.pdfsync
+*.ps
+*.snm
+*.synctex.gz
+*.vrb
+*.fls
+*.fdb_latexmk
+*.synctex(busy)
+*.synctex.gz(busy)
+*.pdfpc
+*.run.xml
+*.bcf
+*.synctex(busy)
+*.thm
+*.lol
+*.tdo
+
+# Editors
+*.swp
+*~
+*.backup
+
+# Version control
+.git
+
+# Output
+*.pdf
